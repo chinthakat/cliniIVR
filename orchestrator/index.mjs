@@ -68,7 +68,7 @@ async function handleLexEvent(event) {
     responseText = "I'm sorry, I'm having trouble understanding. Could you please repeat that?";
   }
 
-  // Return Lex V2 response format
+  // Return Lex V2 response format (no messages - Connect handles TTS)
   const lexResponse = {
     sessionState: {
       dialogAction: {
@@ -83,13 +83,7 @@ async function handleLexEvent(event) {
         conversationHistory: JSON.stringify(conversationHistory),
         endCall: endCall.toString()
       }
-    },
-    messages: [
-      {
-        contentType: "PlainText",
-        content: responseText
-      }
-    ]
+    }
   };
 
   console.log("Lex Response:", JSON.stringify(lexResponse));
@@ -176,9 +170,9 @@ CLINIC INFORMATION:
 - Phone: (03) 9000-1234
 
 DOCTORS AVAILABLE:
-1. Dr. Sarah Chen - General Practitioner, great for general health and women's health
-2. Dr. James Wilson - General Practitioner, specializes in sports medicine and men's health  
-3. Dr. Emily Parker - Pediatrician, wonderful with children
+1. Dr. Kasun Perera - General Practitioner, experienced GP for general consultations
+2. Dr. Nimal Jayasinghe - General Practitioner, over 15 years of experience  
+3. Dr. Sachini Fernando - General Practitioner, our female GP great with patients of all ages
 
 YOUR ROLE:
 - Answer questions about the clinic

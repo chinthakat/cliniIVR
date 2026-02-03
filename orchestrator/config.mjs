@@ -18,11 +18,11 @@ export const CLINIC_CONFIG = {
 
 export const DOCTORS = [
     {
-        id: "dr-chen",
-        name: "Dr. Sarah Chen",
-        gender: "female",
+        id: "dr-perera",
+        name: "Dr. Kasun Perera",
+        gender: "male",
         specialty: "General Practice",
-        description: "Dr. Chen is our experienced female GP available for general consultations.",
+        description: "Dr. Perera is our experienced GP available for general consultations.",
         availability: {
             Monday: { start: 9, end: 17 },
             Tuesday: { start: 9, end: 17 },
@@ -32,11 +32,11 @@ export const DOCTORS = [
         }
     },
     {
-        id: "dr-wilson",
-        name: "Dr. James Wilson",
+        id: "dr-jayasinghe",
+        name: "Dr. Nimal Jayasinghe",
         gender: "male",
         specialty: "General Practice",
-        description: "Dr. Wilson is our male GP with over 15 years of experience.",
+        description: "Dr. Jayasinghe is our male GP with over 15 years of experience.",
         availability: {
             Monday: { start: 9, end: 17 },
             Tuesday: { start: 9, end: 17 },
@@ -46,11 +46,11 @@ export const DOCTORS = [
         }
     },
     {
-        id: "dr-parker",
-        name: "Dr. Emily Parker",
+        id: "dr-fernando",
+        name: "Dr. Sachini Fernando",
         gender: "female",
-        specialty: "Pediatrics",
-        description: "Dr. Parker specializes in children's health and is wonderful with kids of all ages.",
+        specialty: "General Practice",
+        description: "Dr. Fernando is our female GP, great with patients of all ages.",
         availability: {
             Monday: { start: 9, end: 17 },
             Tuesday: { start: 9, end: 17 },

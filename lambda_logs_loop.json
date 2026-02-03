@@ -1,0 +1,76 @@
+﻿{
+    "events": [
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123345392,
+            "message": "INIT_START Runtime Version: nodejs:20.v95\tRuntime Version ARN: arn:aws:lambda:us-east-1::runtime:2d788b26ac416854c5eb831c9f46cb2e0a0ddcee84b1a9b114acbdfdb644c8c1\n",
+            "ingestionTime": 1770123346833,
+            "eventId": "39475069695557607840193566155129173030305423870263951360"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123345893,
+            "message": "START RequestId: afc2b1df-e911-41f1-af89-e4de3bdda86d Version: $LATEST\n",
+            "ingestionTime": 1770123346833,
+            "eventId": "39475069706730281184657408349038567884902252984760139777"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123345894,
+            "message": "2026-02-03T12:55:45.894Z\tafc2b1df-e911-41f1-af89-e4de3bdda86d\tINFO\tReceived event: {\n  \"Details\": {\n    \"ContactData\": {\n      \"Attributes\": {},\n      \"AwsRegion\": \"us-east-1\",\n      \"Channel\": \"VOICE\",\n      \"ContactId\": \"2f0c5565-0dcf-4364-adc8-77e4cba343bd\",\n      \"CustomerEndpoint\": {\n        \"Address\": \"+61401995717\",\n        \"Type\": \"TELEPHONE_NUMBER\"\n      },\n      \"CustomerId\": null,\n      \"Description\": null,\n      \"InitialContactId\": \"2f0c5565-0dcf-4364-adc8-77e4cba343bd\",\n      \"InitiationMethod\": \"INBOUND\",\n      \"InstanceARN\": \"arn:aws:connect:us-east-1:554800146362:instance/ff581f4d-f5b0-48c9-874c-3d76c910cc6e\",\n      \"LanguageCode\": \"en-US\",\n      \"MediaStreams\": {\n        \"Customer\": {\n          \"Audio\": null\n        }\n      },\n      \"Name\": null,\n      \"PreviousContactId\": \"2f0c5565-0dcf-4364-adc8-77e4cba343bd\",\n      \"Queue\": null,\n      \"References\": {},\n      \"RelatedContactId\": null,\n      \"SegmentAttributes\": {\n        \"connect:Purpose\": {\n          \"ValueArn\": null,\n          \"ValueInteger\": null,\n          \"ValueList\": null,\n          \"ValueMap\": {\n            \"analytics\": {\n              \"ValueArn\": null,\n              \"ValueInteger\": null,\n              \"ValueList\": null,\n              \"ValueMap\": null,\n              \"ValueString\": null\n            },\n            \"contact-attributes-search\": {\n              \"ValueArn\": null,\n              \"ValueInteger\": null,\n              \"ValueList\": null,\n              \"ValueMap\": null,\n              \"ValueString\": null\n            }\n          },\n          \"ValueString\": null\n        },\n        \"connect:Subtype\": {\n          \"ValueArn\": null,\n          \"ValueInteger\": null,\n          \"ValueList\": null,\n          \"ValueMap\": null,\n          \"ValueString\": \"connect:Telephony\"\n        }\n      },\n      \"SystemEndpoint\": {\n        \"Address\": \"+61283486119\",\n        \"Type\": \"TELEPHONE_NUMBER\"\n      },\n      \"Tags\": {\n        \"aws:connect:instanceId\": \"ff581f4d-f5b0-48c9-874c-3d76c910cc6e\",\n        \"aws:connect:systemEndpoint\": \"+61283486119\"\n      }\n    },\n    \"Parameters\": {\n      \"inputText\": \"START\"\n    }\n  },\n  \"Name\": \"ContactFlowEvent\"\n}\n",
+            "ingestionTime": 1770123346833,
+            "eventId": "39475069706752581929855938972180103603174901346266120194"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123345898,
+            "message": "2026-02-03T12:55:45.898Z\tafc2b1df-e911-41f1-af89-e4de3bdda86d\tINFO\tConnect Response: {\"responseText\":\"Hello and welcome to Melbourne Medical Clinic. How can I help you today?\",\"conversationHistory\":\"[{\\\"role\\\":\\\"assistant\\\",\\\"content\\\":\\\"Hello and welcome to Melbourne Medical Clinic. How can I help you today?\\\"}]\",\"endCall\":\"false\"}\n",
+            "ingestionTime": 1770123346833,
+            "eventId": "39475069706841784910650061464746246476265494792290041859"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123345901,
+            "message": "END RequestId: afc2b1df-e911-41f1-af89-e4de3bdda86d\n",
+            "ingestionTime": 1770123346833,
+            "eventId": "39475069706908687146245653334170853631083439876807983108"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123345901,
+            "message": "REPORT RequestId: afc2b1df-e911-41f1-af89-e4de3bdda86d\tDuration: 7.85 ms\tBilled Duration: 505 ms\tMemory Size: 256 MB\tMax Memory Used: 90 MB\tInit Duration: 496.88 ms\t\n",
+            "ingestionTime": 1770123346833,
+            "eventId": "39475069706908687146245653334170853631083439876807983109"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123356060,
+            "message": "START RequestId: 9f1444b3-1626-449b-a997-8191b76199b6 Version: $LATEST\n",
+            "ingestionTime": 1770123365078,
+            "eventId": "39475069933461957618118253851089197496514405531235123200"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123356140,
+            "message": "2026-02-03T12:55:56.140Z\t9f1444b3-1626-449b-a997-8191b76199b6\tINFO\tReceived event: {\n  \"inputMode\": \"Speech\",\n  \"sessionId\": \"2f0c5565-0dcf-4364-adc8-77e4cba343bd\",\n  \"requestAttributes\": {\n    \"x-amz-lex:accept-content-types\": \"PlainText,SSML\",\n    \"x-amz-lex:channels:platform\": \"Connect\"\n  },\n  \"inputTranscript\": \"i want to make an appointment\",\n  \"rawInputTranscript\": \"i want to make an appointment\",\n  \"interpretations\": [\n    {\n      \"interpretationSource\": \"Lex\",\n      \"nluConfidence\": 0.89,\n      \"intent\": {\n        \"name\": \"VoiceCommand\",\n        \"slots\": {},\n        \"state\": \"ReadyForFulfillment\",\n        \"confirmationState\": \"None\"\n      }\n    },\n    {\n      \"interpretationSource\": \"Lex\",\n      \"intent\": {\n        \"name\": \"FallbackIntent\",\n        \"slots\": {},\n        \"state\": \"ReadyForFulfillment\",\n        \"confirmationState\": \"None\"\n      }\n    }\n  ],\n  \"bot\": {\n    \"name\": \"ClinicListener\",\n    \"version\": \"2\",\n    \"localeId\": \"en_US\",\n    \"id\": \"WOEOICM5ZJ\",\n    \"aliasId\": \"HY7HC25NXC\",\n    \"aliasName\": \"Prod\"\n  },\n  \"responseContentType\": \"text/plain; charset=utf-8\",\n  \"sessionState\": {\n    \"originatingRequestId\": \"25f7aeb6-6467-4e01-89d5-5f83b4305050\",\n    \"sessionAttributes\": {},\n    \"intent\": {\n      \"name\": \"VoiceCommand\",\n      \"slots\": {},\n      \"state\": \"ReadyForFulfillment\",\n      \"confirmationState\": \"None\"\n    }\n  },\n  \"transcriptions\": [\n    {\n      \"resolvedContext\": {\n        \"intent\": \"VoiceCommand\"\n      },\n      \"resolvedSlots\": {},\n      \"transcriptionConfidence\": 0.9,\n      \"transcription\": \"i want to make an appointment\",\n      \"rawTranscription\": \"i want to make an appointment\"\n    },\n    {\n      \"resolvedContext\": {},\n      \"resolvedSlots\": {},\n      \"transcriptionConfidence\": 0.79,\n      \"transcription\": \"i want to make an agreement\",\n      \"rawTranscription\": \"i want to make an agreement\"\n    },\n    {\n      \"resolvedContext\": {},\n      \"resolvedSlots\": {},\n      \"transcriptionConfidence\": 0.7,\n      \"transcription\": \"i want to make an payment\",\n      \"rawTranscription\": \"i want to make an payment\"\n    }\n  ],\n  \"messageVersion\": \"1.0\",\n  \"invocationSource\": \"FulfillmentCodeHook\"\n}\n",
+            "ingestionTime": 1770123365078,
+            "eventId": "39475069935246017234000703702412054958326274451713556481"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123356140,
+            "message": "2026-02-03T12:55:56.140Z\t9f1444b3-1626-449b-a997-8191b76199b6\tINFO\tCalling LLM with messages: 1\n",
+            "ingestionTime": 1770123365078,
+            "eventId": "39475069935246017234000703702412054958326274451713556482"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]6c297a59c9ec4114b846ad2f557d513f",
+            "timestamp": 1770123358142,
+            "message": "2026-02-03T12:55:58.142Z\t9f1444b3-1626-449b-a997-8191b76199b6\tINFO\tLLM Response: {\n  model: 'claude-3-5-haiku-20241022',\n  id: 'msg_bdrk_01AjF2BmiqZAAc5c1F8H663u',\n  type: 'message',\n  role: 'assistant',\n  content: [\n    {\n      type: 'text',\n      text: \"Hello! Thank you for calling Melbourne Medical Clinic. I'd be happy to help you book an appointment. Which doctor would you like to see - Dr. Chen, Dr. Wilson, or Dr. Parker? And do you have a preferred day and time?\"\n    }\n  ],\n  stop_reason: 'end_turn',\n  stop_sequence: null,\n  usage: {\n    input_tokens: 290,\n    cache_creation_input_tokens: 0,\n    cache_read_input_tokens: 0,\n    output_tokens: 56\n  }\n}\n",
+            "ingestionTime": 1770123365078,
+            "eventId": "39475069979892109121459011231766562940168294186686349315"
+        }
+    ],
+    "searchedLogStreams": [],
+    "nextToken": "Bxkq6kVGFtq2y_MoigeqscPOdhXVbhiVtLoAmXb5jCpCoLSaQFu_ttfqP2x92QaAreRzj0QaQeLxfN9LpCUOELUbvp89qkdLWE7hpCuH89alyV6X-0eueZpJOge2dxf5a2VqO4_RRaGzbKgq2T-ZE_GKLu6GziZqDjgwb69ySMGRMUxzCV2YPxZmZlqpTEU18WO-AeSfYtbhOBHX7YFWFZsuccBG9X6oqQwJH0kWvQCqPj85Eqvrxr4M8PVExnzFK2Hy-Jn7iqDLemDh45vF5q_8uIBTZnYPcAohED8LRSs"
+}
