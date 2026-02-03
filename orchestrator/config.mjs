@@ -3,13 +3,22 @@
 export const CLINIC_CONFIG = {
     name: "Melbourne Medical Clinic",
     timezone: "Australia/Melbourne",
-    greeting: "Hello and welcome to Melbourne Medical Clinic. How can I help you today?",
-
-    // Business hours (24-hour format)
-    hours: {
-        open: 9,  // 9 AM
-        close: 17, // 5 PM
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    // Dynamic greetings
+    greetings: {
+        morning: [
+            "Good morning, thanks for calling Melbourne Medical Clinic. This is Sarah. How can I look after you today?",
+            "Good morning, Melbourne Medical Clinic. How may I help you?",
+            "Hi, good morning! You've reached Melbourne Medical Clinic. How can I help?"
+        ],
+        afternoon: [
+            "Good afternoon, Melbourne Medical Clinic. How can I help you today?",
+            "Thanks for calling Melbourne Medical Clinic. This is Sarah. How may I assist you?",
+            "Hello, good afternoon! Melbourne Medical Clinic. How can I help?"
+        ],
+        evening: [
+            "Good evening, Melbourne Medical Clinic. How can I help you?",
+            "Thanks for calling Melbourne Medical Clinic. How may I assist you tonight?"
+        ]
     },
 
     // Appointment slot duration in minutes

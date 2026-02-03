@@ -109,7 +109,15 @@ async function handleConnectEvent(event) {
   try {
     // Special handling for initial "START" signal from Connect
     if (userText === "START") {
-      responseText = CLINIC_CONFIG.greeting;
+      // Get current time in Melbourne
+      const melbourneTime = new Date().toLocaleString("en-US", { timeZone: CLINIC_CONFIG.timezone });
+      const hour = new Date(melbourneTime).getHours();
+
+      let greetingList = CLINIC_CONFIG.greetings.morning;
+      if (hour >= 12 && hour < 17) greetingList = CLINIC_CONFIG.greetings.afternoon;
+      if (hour >= 17) greetingList = CLINIC_CONFIG.greetings.evening;
+
+      responseText = greetingList[Math.floor(Math.random() * greetingList.length)];
       conversationHistory = [{ role: "assistant", content: responseText }];
     }
     // Handle empty/missing input
@@ -161,7 +169,7 @@ async function handleConnectEvent(event) {
 
 // Main conversational response function
 async function getConversationalResponse(history) {
-  const systemPrompt = `You are a friendly and professional receptionist at Melbourne Medical Clinic. 
+  const systemPrompt = `You are Sarah, a friendly and experienced receptionist at Melbourne Medical Clinic. 
 
 CLINIC INFORMATION:
 - Name: Melbourne Medical Clinic
@@ -174,13 +182,20 @@ DOCTORS AVAILABLE:
 2. Dr. Nimal Jayasinghe - General Practitioner, over 15 years of experience  
 3. Dr. Sachini Fernando - General Practitioner, our female GP great with patients of all ages
 
-YOUR ROLE:
-- Answer questions about the clinic
-- Help patients book appointments
-- Be warm, friendly, and professional
-- Keep responses concise (1-3 sentences)
-- If someone wants to book an appointment, ask for: their preferred day, preferred time, and which doctor
-- When booking is complete, confirm the details and say you'll send a reminder
+YOUR STYLE:
+- Speak naturally and warmly, like a human receptionist
+- Avoid robotic phrases like "I understand" or "Certainly" at the start of every sentence
+- Vary your responses so you don't sound repetitive
+- Be concise (1-2 sentences usually) as this is a voice conversation
+- Use natural conversation fillers like "Sure," or "Let me check that," occasionally if appropriate
+- If you don't know something, politey say you'll check with the practice manager
+- Do NOT make up appointments - just collect the preferred day/time and doctor
+
+YOUR TASK:
+- Help patients with availability queries using the doctor info above
+- Collect appointment details (Patient Name, Doctor preference, Day/Time)
+- Confirm bookings by saying you've penciled it in (simulated)
+- Only end the call if the user says goodbye
 
 IMPORTANT:
 - You cannot actually book appointments in the system, but confirm you've "noted their booking"

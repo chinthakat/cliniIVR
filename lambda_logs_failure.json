@@ -1,0 +1,76 @@
+﻿{
+    "events": [
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126755922,
+            "message": "INIT_START Runtime Version: nodejs:20.v95\tRuntime Version ARN: arn:aws:lambda:us-east-1::runtime:2d788b26ac416854c5eb831c9f46cb2e0a0ddcee84b1a9b114acbdfdb644c8c1\n",
+            "ingestionTime": 1770126756177,
+            "eventId": "39475145752918129784839713178586688351573016922930085888"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756091,
+            "message": "2026-02-03T13:52:36.091Z\tundefined\tERROR\tUncaught Exception \t{\"errorType\":\"Runtime.UserCodeSyntaxError\",\"errorMessage\":\"SyntaxError: Unexpected identifier 'cannot'\",\"stack\":[\"Runtime.UserCodeSyntaxError: SyntaxError: Unexpected identifier 'cannot'\",\"    at _loadUserApp (file:///var/runtime/index.mjs:1189:17)\",\"    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1235:21)\",\"    at async start (file:///var/runtime/index.mjs:1454:23)\",\"    at async file:///var/runtime/index.mjs:1464:1\"]}\n",
+            "ingestionTime": 1770126756177,
+            "eventId": "39475145756686955723391388489506224739650590017440776193"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756120,
+            "message": "INIT_REPORT Init Duration: 198.12 ms\tPhase: init\tStatus: error\tError Type: Runtime.UserCodeSyntaxError\n",
+            "ingestionTime": 1770126756202,
+            "eventId": "39475145757333677334148776560641021067716838507324047360"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756224,
+            "message": "2026-02-03T13:52:36.224Z\tundefined\tERROR\tUncaught Exception \t{\"errorType\":\"Runtime.UserCodeSyntaxError\",\"errorMessage\":\"SyntaxError: Unexpected identifier 'cannot'\",\"stack\":[\"Runtime.UserCodeSyntaxError: SyntaxError: Unexpected identifier 'cannot'\",\"    at _loadUserApp (file:///var/runtime/index.mjs:1189:17)\",\"    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1235:21)\",\"    at async start (file:///var/runtime/index.mjs:1454:23)\",\"    at async file:///var/runtime/index.mjs:1464:1\"]}\n",
+            "ingestionTime": 1770126756247,
+            "eventId": "39475145759652954834795961367414669329359053507130949632"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756245,
+            "message": "INIT_REPORT Init Duration: 105.00 ms\tPhase: invoke\tStatus: error\tError Type: Runtime.UserCodeSyntaxError\n",
+            "ingestionTime": 1770126756259,
+            "eventId": "39475145760121270483965104453401740689660817013781364736"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756245,
+            "message": "START RequestId: 66c84572-fc4d-4773-9691-a14cdb3e2e74 Version: $LATEST\n",
+            "ingestionTime": 1770126756259,
+            "eventId": "39475145760121270483965104453401740689660817013781364737"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756250,
+            "message": "END RequestId: 66c84572-fc4d-4773-9691-a14cdb3e2e74\n",
+            "ingestionTime": 1770126756259,
+            "eventId": "39475145760232774209957757569109419281024058821311266818"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756250,
+            "message": "REPORT RequestId: 66c84572-fc4d-4773-9691-a14cdb3e2e74\tDuration: 119.86 ms\tBilled Duration: 120 ms\tMemory Size: 256 MB\tMax Memory Used: 70 MB\tStatus: error\tError Type: Runtime.UserCodeSyntaxError\n",
+            "ingestionTime": 1770126756259,
+            "eventId": "39475145760232774209957757569109419281024058821311266819"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756404,
+            "message": "2026-02-03T13:52:36.404Z\tundefined\tERROR\tUncaught Exception \t{\"errorType\":\"Runtime.UserCodeSyntaxError\",\"errorMessage\":\"SyntaxError: Unexpected identifier 'cannot'\",\"stack\":[\"Runtime.UserCodeSyntaxError: SyntaxError: Unexpected identifier 'cannot'\",\"    at _loadUserApp (file:///var/runtime/index.mjs:1189:17)\",\"    at async UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:1235:21)\",\"    at async start (file:///var/runtime/index.mjs:1454:23)\",\"    at async file:///var/runtime/index.mjs:1464:1\"]}\n",
+            "ingestionTime": 1770126756425,
+            "eventId": "39475145763667088970531473533106603621517208776678244352"
+        },
+        {
+            "logStreamName": "2026/02/03/[$LATEST]e1e39306068d4e18b8c25487ddf12e52",
+            "timestamp": 1770126756423,
+            "message": "INIT_REPORT Init Duration: 99.38 ms\tPhase: invoke\tStatus: error\tError Type: Runtime.UserCodeSyntaxError\n",
+            "ingestionTime": 1770126756438,
+            "eventId": "39475145764090803129303555372811294876756660902542770176"
+        }
+    ],
+    "searchedLogStreams": [],
+    "nextToken": "Bxkq6kVGFtq2y_MoigeqscPOdhXVbhiVtLoAmXb5jCr56G5C0cjCdAAvv3KTv9dq3uIVS130GGLpnZdhLqkglQoVs2YXNUua1RMvZm_LgHXgzsxnu9JGSeDms39ZbPnsb0n2jqVnhjBKEVbhVjuDxZOhQNUkNlfl_9BUD445N0tLUp2jVePZYpog-pbLkxE5cOh-kQGyh8VOpV9-pDgvztA6--nrLH7FWHEMfuh4PKfqU3RFXyz-pgbkWOgsLwiaZ2fBLBS0hLfH9GhU2abLft31OxtrxqojzK3hL33WOiuGQYKv81fwKiZo6-YUwDOeIoX0bG5wiSI7jfvRS2RLvQ"
+}
