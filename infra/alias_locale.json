@@ -1,0 +1,11 @@
+{
+    "en_US": {
+        "enabled": true,
+        "codeHookSpecification": {
+            "lambdaCodeHook": {
+                "lambdaARN": "arn:aws:lambda:us-east-1:554800146362:function:ClinicVoiceOrchestrator",
+                "codeHookInterfaceVersion": "1.0"
+            }
+        }
+    }
+}

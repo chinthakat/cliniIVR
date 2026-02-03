@@ -1,0 +1,43 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "3520d8ff-66b7-44c7-9e50-78a0dc367472",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 20,
+      "y": 20
+    },
+    "snapToGrid": true,
+    "ActionMetadata": {
+      "3520d8ff-66b7-44c7-9e50-78a0dc367472": {
+        "position": {
+          "x": 200,
+          "y": 20
+        }
+      },
+      "a96df8e6-273e-4700-a9a2-6e7d22c30382": {
+        "position": {
+          "x": 450,
+          "y": 20
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "3520d8ff-66b7-44c7-9e50-78a0dc367472",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Parameters": {
+        "Voice": "Danielle"
+      },
+      "Transitions": {
+        "NextAction": "a96df8e6-273e-4700-a9a2-6e7d22c30382"
+      }
+    },
+    {
+      "Identifier": "a96df8e6-273e-4700-a9a2-6e7d22c30382",
+      "Type": "DisconnectParticipant",
+      "Parameters": {},
+      "Transitions": {}
+    }
+  ]
+}

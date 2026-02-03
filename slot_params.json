@@ -1,0 +1,15 @@
+{
+    "promptSpecification":  {
+                                "messageGroupsList":  [
+                                                          {
+                                                              "message":  {
+                                                                              "plainTextMessage":  {
+                                                                                                       "value":  "How can I help?"
+                                                                                                   }
+                                                                          }
+                                                          }
+                                                      ],
+                                "maxRetries":  1
+                            },
+    "slotConstraint":  "Required"
+}

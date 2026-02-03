@@ -1,0 +1,181 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "596b4f92-5c15-46c2-b5f8-ad2021d9f139",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 20,
+      "y": 20
+    },
+    "snapToGrid": true,
+    "ActionMetadata": {
+      "596b4f92-5c15-46c2-b5f8-ad2021d9f139": {
+        "position": {
+          "x": 200,
+          "y": 20
+        }
+      },
+      "0d5dca35-a26e-478a-a147-a7afedf96036": {
+        "position": {
+          "x": 450,
+          "y": 20
+        }
+      },
+      "2ba42894-7d6f-4927-891b-8e44227555a2": {
+        "position": {
+          "x": 700,
+          "y": 20
+        }
+      },
+      "c3779d66-5b20-41c8-8bc2-3c07df834fcb": {
+        "position": {
+          "x": 950,
+          "y": 200
+        }
+      },
+      "c774a289-288a-42bb-a852-4e90d059d9cb": {
+        "position": {
+          "x": 1200,
+          "y": 200
+        }
+      },
+      "94811d35-2287-4024-aa76-075517a3947b": {
+        "position": {
+          "x": 950,
+          "y": 20
+        }
+      },
+      "c5fcc78d-fbbc-4947-97a7-8dd60f41ed39": {
+        "position": {
+          "x": 1200,
+          "y": 20
+        }
+      },
+      "b6a9e371-7db4-421b-8220-c3f07a2059e2": {
+        "position": {
+          "x": 1450,
+          "y": 20
+        }
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "596b4f92-5c15-46c2-b5f8-ad2021d9f139",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Parameters": {
+        "Voice": "Danielle"
+      },
+      "Transitions": {
+        "NextAction": "0d5dca35-a26e-478a-a147-a7afedf96036"
+      }
+    },
+    {
+      "Identifier": "0d5dca35-a26e-478a-a147-a7afedf96036",
+      "Type": "InvokeLambdaFunction",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:554800146362:function:ClinicVoiceOrchestrator",
+        "InvocationTimeLimitSeconds": "8"
+      },
+      "Transitions": {
+        "NextAction": "2ba42894-7d6f-4927-891b-8e44227555a2",
+        "Errors": [
+          {
+            "NextAction": "b6a9e371-7db4-421b-8220-c3f07a2059e2",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Identifier": "2ba42894-7d6f-4927-891b-8e44227555a2",
+      "Type": "CheckContactAttributes",
+      "Parameters": {
+        "Attribute": "endCall",
+        "AttributeNamespace": "External"
+      },
+      "Transitions": {
+        "NextAction": "94811d35-2287-4024-aa76-075517a3947b",
+        "Conditions": [
+          {
+            "Operator": "Equals",
+            "Operands": [
+              "true"
+            ],
+            "NextAction": "c3779d66-5b20-41c8-8bc2-3c07df834fcb"
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "94811d35-2287-4024-aa76-075517a3947b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Identifier": "c3779d66-5b20-41c8-8bc2-3c07df834fcb",
+      "Type": "MessageParticipant",
+      "Parameters": {
+        "Text": "$.External.responseText"
+      },
+      "Transitions": {
+        "NextAction": "c774a289-288a-42bb-a852-4e90d059d9cb"
+      }
+    },
+    {
+      "Identifier": "c774a289-288a-42bb-a852-4e90d059d9cb",
+      "Type": "DisconnectParticipant",
+      "Parameters": {},
+      "Transitions": {}
+    },
+    {
+      "Identifier": "94811d35-2287-4024-aa76-075517a3947b",
+      "Type": "GetUserInput",
+      "Parameters": {
+        "Text": "$.External.responseText",
+        "Timeout": "5",
+        "MaxDigits": "1",
+        "BotAliasArn": "arn:aws:lex:us-east-1:554800146362:bot-alias/WOEOICM5ZJ/HY7HC25NXC"
+      },
+      "Transitions": {
+        "NextAction": "c5fcc78d-fbbc-4947-97a7-8dd60f41ed39",
+        "Errors": [
+          {
+            "NextAction": "c5fcc78d-fbbc-4947-97a7-8dd60f41ed39",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "2ba42894-7d6f-4927-891b-8e44227555a2",
+            "ErrorType": "NoInput"
+          }
+        ]
+      }
+    },
+    {
+      "Identifier": "c5fcc78d-fbbc-4947-97a7-8dd60f41ed39",
+      "Type": "InvokeLambdaFunction",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:554800146362:function:ClinicVoiceOrchestrator",
+        "InvocationTimeLimitSeconds": "8",
+        "LambdaFunctionParameters": {
+          "inputText": "$.Lex.InputTranscript"
+        }
+      },
+      "Transitions": {
+        "NextAction": "2ba42894-7d6f-4927-891b-8e44227555a2",
+        "Errors": [
+          {
+            "NextAction": "b6a9e371-7db4-421b-8220-c3f07a2059e2",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Identifier": "b6a9e371-7db4-421b-8220-c3f07a2059e2",
+      "Type": "DisconnectParticipant",
+      "Parameters": {},
+      "Transitions": {}
+    }
+  ]
+}

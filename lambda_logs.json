@@ -1,0 +1,51 @@
+{
+    "events": [
+        {
+            "timestamp": 1770113242490,
+            "message": "INIT_START Runtime Version: nodejs:20.v95\tRuntime Version ARN: arn:aws:lambda:us-east-1::runtime:2d788b26ac416854c5eb831c9f46cb2e0a0ddcee84b1a9b114acbdfdb644c8c1\n",
+            "ingestionTime": 1770113251104
+        },
+        {
+            "timestamp": 1770113243018,
+            "message": "START RequestId: 76328c45-9a36-4dfa-8eaf-8a2c9756bb4d Version: $LATEST\n",
+            "ingestionTime": 1770113251104
+        },
+        {
+            "timestamp": 1770113243020,
+            "message": "2026-02-03T10:07:23.020Z\t76328c45-9a36-4dfa-8eaf-8a2c9756bb4d\tINFO\tReceived event: {\n  \"Details\": {\n    \"ContactData\": {\n      \"Attributes\": {},\n      \"AwsRegion\": \"us-east-1\",\n      \"Channel\": \"VOICE\",\n      \"ContactId\": \"dacee12d-a2b6-4c1a-b90f-96a844526c2a\",\n      \"CustomerEndpoint\": {\n        \"Address\": \"+61401995717\",\n        \"Type\": \"TELEPHONE_NUMBER\"\n      },\n      \"CustomerId\": null,\n      \"Description\": null,\n      \"InitialContactId\": \"dacee12d-a2b6-4c1a-b90f-96a844526c2a\",\n      \"InitiationMethod\": \"INBOUND\",\n      \"InstanceARN\": \"arn:aws:connect:us-east-1:554800146362:instance/ff581f4d-f5b0-48c9-874c-3d76c910cc6e\",\n      \"LanguageCode\": \"en-US\",\n      \"MediaStreams\": {\n        \"Customer\": {\n          \"Audio\": null\n        }\n      },\n      \"Name\": null,\n      \"PreviousContactId\": \"dacee12d-a2b6-4c1a-b90f-96a844526c2a\",\n      \"Queue\": null,\n      \"References\": {},\n      \"RelatedContactId\": null,\n      \"SegmentAttributes\": {\n        \"connect:Purpose\": {\n          \"ValueArn\": null,\n          \"ValueInteger\": null,\n          \"ValueList\": null,\n          \"ValueMap\": {\n            \"analytics\": {\n              \"ValueArn\": null,\n              \"ValueInteger\": null,\n              \"ValueList\": null,\n              \"ValueMap\": null,\n              \"ValueString\": null\n            },\n            \"contact-attributes-search\": {\n              \"ValueArn\": null,\n              \"ValueInteger\": null,\n              \"ValueList\": null,\n              \"ValueMap\": null,\n              \"ValueString\": null\n            }\n          },\n          \"ValueString\": null\n        },\n        \"connect:Subtype\": {\n          \"ValueArn\": null,\n          \"ValueInteger\": null,\n          \"ValueList\": null,\n          \"ValueMap\": null,\n          \"ValueString\": \"connect:Telephony\"\n        }\n      },\n      \"SystemEndpoint\": {\n        \"Address\": \"+61283486119\",\n        \"Type\": \"TELEPHONE_NUMBER\"\n      },\n      \"Tags\": {\n        \"aws:connect:instanceId\": \"ff581f4d-f5b0-48c9-874c-3d76c910cc6e\",\n        \"aws:connect:systemEndpoint\": \"+61283486119\"\n      }\n    },\n    \"Parameters\": {}\n  },\n  \"Name\": \"ContactFlowEvent\"\n}\n",
+            "ingestionTime": 1770113251104
+        },
+        {
+            "timestamp": 1770113243026,
+            "message": "END RequestId: 76328c45-9a36-4dfa-8eaf-8a2c9756bb4d\n",
+            "ingestionTime": 1770113251104
+        },
+        {
+            "timestamp": 1770113243026,
+            "message": "REPORT RequestId: 76328c45-9a36-4dfa-8eaf-8a2c9756bb4d\tDuration: 7.60 ms\tBilled Duration: 529 ms\tMemory Size: 256 MB\tMax Memory Used: 90 MB\tInit Duration: 521.34 ms\t\n",
+            "ingestionTime": 1770113251104
+        },
+        {
+            "timestamp": 1770113253231,
+            "message": "START RequestId: b87b2526-7af5-4e04-961d-a43f26a6d015 Version: $LATEST\n",
+            "ingestionTime": 1770113262252
+        },
+        {
+            "timestamp": 1770113253303,
+            "message": "2026-02-03T10:07:33.303Z\tb87b2526-7af5-4e04-961d-a43f26a6d015\tINFO\tReceived event: {\n  \"Details\": {\n    \"ContactData\": {\n      \"Attributes\": {\n        \"conversationHistory\": \"[]\"\n      },\n      \"AwsRegion\": \"us-east-1\",\n      \"Channel\": \"VOICE\",\n      \"ContactId\": \"dacee12d-a2b6-4c1a-b90f-96a844526c2a\",\n      \"CustomerEndpoint\": {\n        \"Address\": \"+61401995717\",\n        \"Type\": \"TELEPHONE_NUMBER\"\n      },\n      \"CustomerId\": null,\n      \"Description\": null,\n      \"InitialContactId\": \"dacee12d-a2b6-4c1a-b90f-96a844526c2a\",\n      \"InitiationMethod\": \"INBOUND\",\n      \"InstanceARN\": \"arn:aws:connect:us-east-1:554800146362:instance/ff581f4d-f5b0-48c9-874c-3d76c910cc6e\",\n      \"LanguageCode\": \"en-US\",\n      \"MediaStreams\": {\n        \"Customer\": {\n          \"Audio\": null\n        }\n      },\n      \"Name\": null,\n      \"PreviousContactId\": \"dacee12d-a2b6-4c1a-b90f-96a844526c2a\",\n      \"Queue\": null,\n      \"References\": {},\n      \"RelatedContactId\": null,\n      \"SegmentAttributes\": {\n        \"connect:Purpose\": {\n          \"ValueArn\": null,\n          \"ValueInteger\": null,\n          \"ValueList\": null,\n          \"ValueMap\": {\n            \"analytics\": {\n              \"ValueArn\": null,\n              \"ValueInteger\": null,\n              \"ValueList\": null,\n              \"ValueMap\": null,\n              \"ValueString\": null\n            },\n            \"contact-attributes-search\": {\n              \"ValueArn\": null,\n              \"ValueInteger\": null,\n              \"ValueList\": null,\n              \"ValueMap\": null,\n              \"ValueString\": null\n            }\n          },\n          \"ValueString\": null\n        },\n        \"connect:Subtype\": {\n          \"ValueArn\": null,\n          \"ValueInteger\": null,\n          \"ValueList\": null,\n          \"ValueMap\": null,\n          \"ValueString\": \"connect:Telephony\"\n        }\n      },\n      \"SystemEndpoint\": {\n        \"Address\": \"+61283486119\",\n        \"Type\": \"TELEPHONE_NUMBER\"\n      },\n      \"Tags\": {\n        \"aws:connect:instanceId\": \"ff581f4d-f5b0-48c9-874c-3d76c910cc6e\",\n        \"aws:connect:systemEndpoint\": \"+61283486119\"\n      }\n    },\n    \"Parameters\": {\n      \"Value\": \"\",\n      \"inputText\": \"\",\n      \"Key\": \"inputText\"\n    }\n  },\n  \"Name\": \"ContactFlowEvent\"\n}\n",
+            "ingestionTime": 1770113262252
+        },
+        {
+            "timestamp": 1770113253305,
+            "message": "END RequestId: b87b2526-7af5-4e04-961d-a43f26a6d015\n",
+            "ingestionTime": 1770113262252
+        },
+        {
+            "timestamp": 1770113253305,
+            "message": "REPORT RequestId: b87b2526-7af5-4e04-961d-a43f26a6d015\tDuration: 73.85 ms\tBilled Duration: 74 ms\tMemory Size: 256 MB\tMax Memory Used: 90 MB\t\n",
+            "ingestionTime": 1770113262252
+        }
+    ],
+    "nextForwardToken": "f/39474844634496899436872645371836345085442042112195559427/s",
+    "nextBackwardToken": "b/39474844393314340114763956082650428292284934291326107648/s"
+}

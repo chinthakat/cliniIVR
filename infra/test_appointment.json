@@ -1,0 +1,16 @@
+{
+    "Details": {
+        "ContactData": {
+            "Attributes": {
+                "conversationState": "CAPTURE_INTENT",
+                "callData": "{}"
+            },
+            "Channel": "VOICE",
+            "ContactId": "test-contact-002"
+        },
+        "Parameters": {
+            "inputText": "I'd like to book an appointment please"
+        }
+    },
+    "Name": "ContactFlowEvent"
+}

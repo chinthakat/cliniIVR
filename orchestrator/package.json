@@ -1,0 +1,9 @@
+{
+    "name": "clinic-orchestrator",
+    "version": "1.0.0",
+    "description": "Clinic Voice Orchestrator",
+    "main": "index.mjs",
+    "dependencies": {
+        "@aws-sdk/client-bedrock-runtime": "^3.500.0"
+    }
+}

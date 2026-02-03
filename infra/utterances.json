@@ -1,0 +1,32 @@
+[
+    {
+        "utterance": "I would like to book an appointment"
+    },
+    {
+        "utterance": "I need to see a doctor"
+    },
+    {
+        "utterance": "What are your hours"
+    },
+    {
+        "utterance": "Hello"
+    },
+    {
+        "utterance": "Hi there"
+    },
+    {
+        "utterance": "I have a question"
+    },
+    {
+        "utterance": "Can you help me"
+    },
+    {
+        "utterance": "I need help"
+    },
+    {
+        "utterance": "Good morning"
+    },
+    {
+        "utterance": "Good afternoon"
+    }
+]
