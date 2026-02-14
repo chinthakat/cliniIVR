@@ -1,9 +1,79 @@
 
 import json
 import uuid
+import subprocess
+import sys
 
 def action_id():
     return str(uuid.uuid4())
+
+# valid flow
+def get_lambda_arn(function_name):
+    try:
+        # Try to get from AWS CLI
+        result = subprocess.run(
+            ["aws", "lambda", "get-function", "--function-name", function_name, "--query", "Configuration.FunctionArn", "--output", "text", "--no-cli-pager"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
+    except Exception as e:
+        sys.stderr.write(f"Warning: Could not fetch Lambda ARN for {function_name}: {e}\n")
+        return f"arn:aws:lambda:us-east-1:ACCOUNT_ID:function:{function_name}"
+
+def get_lex_bot_alias_arn(bot_name, alias_name):
+    try:
+        # Get Bot ID
+        bot_id_result = subprocess.run(
+            ["aws", "lexv2-models", "list-bots", "--query", f"botSummaries[?botName=='{bot_name}'].botId", "--output", "text", "--no-cli-pager"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        bot_id = bot_id_result.stdout.strip()
+        
+        if not bot_id:
+             raise Exception(f"Bot {bot_name} not found")
+
+        # Get Alias ID
+        alias_id_result = subprocess.run(
+            ["aws", "lexv2-models", "list-bot-aliases", "--bot-id", bot_id, "--query", f"botAliasSummaries[?botAliasName=='{alias_name}'].botAliasId", "--output", "text", "--no-cli-pager"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        alias_id = alias_id_result.stdout.strip()
+        
+        if not alias_id:
+            raise Exception(f"Alias {alias_name} not found for bot {bot_name}")
+            
+        # Construct ARN (Region us-east-1 hardcoded for now or fetch from AWS config)
+        # Getting region
+        region_result = subprocess.run(
+            ["aws", "configure", "get", "region"],
+            capture_output=True,
+            text=True
+        )
+        region = region_result.stdout.strip() or "us-east-1"
+        
+        # Getting Account ID
+        account_result = subprocess.run(
+            ["aws", "sts", "get-caller-identity", "--query", "Account", "--output", "text", "--no-cli-pager"],
+             capture_output=True,
+            text=True,
+            check=True
+        )
+        account_id = account_result.stdout.strip()
+
+        return f"arn:aws:lex:{region}:{account_id}:bot-alias/{bot_id}/{alias_id}"
+
+    except Exception as e:
+        sys.stderr.write(f"Warning: Could not fetch Lex Bot Alias ARN for {bot_name}: {e}\n")
+        return "arn:aws:lex:us-east-1:ACCOUNT_ID:bot-alias/BOT_ID/ALIAS_ID"
+
+lambda_arn = get_lambda_arn("ClinicVoiceOrchestrator")
+lex_bot_alias_arn = get_lex_bot_alias_arn("ClinicListener", "Prod")
 
 # Generate IDs
 id_start = action_id()
@@ -35,14 +105,14 @@ flow = {
     {
       "Identifier": id_set_voice,
       "Type": "UpdateContactTextToSpeechVoice",
-      "Parameters": { "Voice": "Danielle" },
+      "Parameters": { "Voice": "Olivia" },
       "Transitions": { "NextAction": id_invoke_init }
     },
     {
       "Identifier": id_invoke_init,
       "Type": "InvokeLambdaFunction",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:554800146362:function:ClinicVoiceOrchestrator",
+        "LambdaFunctionARN": lambda_arn,
         "InvocationTimeLimitSeconds": "8"
       },
       "Transitions": { 
@@ -86,7 +156,7 @@ flow = {
         "Text": "$.External.responseText",
         "Timeout": "5",
         "MaxDigits": "1",
-        "BotAliasArn": "arn:aws:lex:us-east-1:554800146362:bot-alias/WOEOICM5ZJ/HY7HC25NXC"
+        "BotAliasArn": lex_bot_alias_arn
       },
       "Transitions": {
         "NextAction": id_invoke_process,
@@ -97,7 +167,7 @@ flow = {
       "Identifier": id_invoke_process,
       "Type": "InvokeLambdaFunction",
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:554800146362:function:ClinicVoiceOrchestrator",
+        "LambdaFunctionARN": lambda_arn,
         "InvocationTimeLimitSeconds": "8",
         "LambdaFunctionParameters": {
             "inputText": "$.Lex.InputTranscript"
