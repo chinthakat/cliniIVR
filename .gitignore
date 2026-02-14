@@ -10,11 +10,18 @@ __pycache__/
 *.zip
 *.log
 flow_*.json
-*.json
-!infra/*.json
-!package.json
-!package-lock.json
+current_*.json
+final_*.json
+*_flow.json
 
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ignored JSONs (whitelist approach)
+*.json
+!infra/*.json
+!package.json
+!package-lock.json
+!orchestrator/package.json
+!orchestrator/package-lock.json
