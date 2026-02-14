@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+__pycache__/
+
+# Environment Variables
+.env
+.env.*
+
+# Generated Files
+*.zip
+*.log
+flow_*.json
+*.json
+!infra/*.json
+!package.json
+!package-lock.json
+
+# System Files
+.DS_Store
+Thumbs.db
